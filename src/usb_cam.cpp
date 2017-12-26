@@ -33,6 +33,10 @@
  *  POSSIBILITY OF SUCH DAMAGE.
  *
  *********************************************************************/
+#define avcodec_alloc_frame av_frame_alloc
+#define PIX_FMT_RGB24 AV_PIX_FMT_RGB24
+#define PIX_FMT_YUV422P AV_PIX_FMT_YUV422P 
+ 
 #define __STDC_CONSTANT_MACROS
 #include <stdio.h>
 #include <stdlib.h>

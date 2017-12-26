@@ -7,9 +7,16 @@ project(usb_cam)
 find_package(catkin REQUIRED COMPONENTS image_transport roscpp std_msgs std_srvs sensor_msgs camera_info_manager)
 
 ## pkg-config libraries
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(avcodec libavcodec REQUIRED)
-pkg_check_modules(swscale libswscale REQUIRED)
+#find_package(PkgConfig REQUIRED)
+#pkg_check_modules(avcodec libavcodec REQUIRED)
+#pkg_check_modules(swscale libswscale REQUIRED)
+
+set(avcodec_LIBRARIES /home/odroid/ffmpeg_build/lib/libavcodec.so.58)
+set(swscale_LIBRARIES /home/odroid/ffmpeg_build/lib/libswscale.so.5)
+set(avcodec_INCLUDE_DIRS /home/odroid/ffmpeg_build/include/libavcodec)
+set(swscale_INCLUDE_DIRS /home/odroid/ffmpeg_build/include/libswscale)
+MESSAGE(${avcodec_INCLUDE_DIRS})
+MESSAGE(${avcodec_INCLUDE_DIRS})
 
 ###################################################
 ## Declare things to be passed to other projects ##
